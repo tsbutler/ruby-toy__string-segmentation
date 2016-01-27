@@ -6,7 +6,7 @@ class StringSegmenterTest < Minitest::Test
     sample_string = "one"
     assert_equal(["one"], segment_string(sample_string))
   end
-
+  
   def test_string_segmentation_basic
     sample_string = "onetwothree"
     assert_equal(["one", "two", "three"], segment_string(sample_string))
