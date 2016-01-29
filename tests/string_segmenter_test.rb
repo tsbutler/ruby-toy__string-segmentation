@@ -18,8 +18,8 @@ class StringSegmenterTest < Minitest::Test
   end
 
   def test_string_segmentation_ing
-    sample_string = "openingclosingendingstarting"
-    assert_equal(["opening", "closing", "ending", "starting"], segment_string(sample_string))
+   sample_string = "openingclosingendingstarting"
+   assert_equal(["opening", "closing", "ending", "starting"], segment_string(sample_string))
   end
 
   def test_string_segmentation_ion
@@ -28,28 +28,33 @@ class StringSegmenterTest < Minitest::Test
   end
 
   def test_string_segmentation_ed
-    sample_string = "trustedfatedpartedwalked"
-    assert_equal(["trusted", "fated", "parted", "walked"], segment_string(sample_string))
+   sample_string = "trustedfatedpartedwalked"
+   assert_equal(["trusted", "fated", "parted", "walked"], segment_string(sample_string))
   end
 
   def test_string_segmentation_ment
-    sample_string = "cementcasementbasementpavement"
-    assert_equal(["cement", "casement", "basement", "pavement"], segment_string(sample_string))
+   sample_string = "cementcasementbasementpavement"
+   assert_equal(["cement", "casement", "basement", "pavement"], segment_string(sample_string))
   end
 
   def test_string_segmentation_ly
-    sample_string = "lovelycarefullyoriginally"
-    assert_equal(["lovely", "carefully", "originally"], segment_string(sample_string))
+   sample_string = "lovelycarefullyoriginally"
+   assert_equal(["lovely", "carefully", "originally"], segment_string(sample_string))
   end
 
   def test_string_segmentation_ive
-    sample_string = "positivesuggestiveconnective"
-    assert_equal(["positive", "suggestive", "connective"], segment_string(sample_string))
+   sample_string = "positivesuggestiveconnective"
+   assert_equal(["positive", "suggestive", "connective"], segment_string(sample_string))
   end 
+
+  def test_string_segmentation_prefixes
+    sample_string = "prejudgesubtractionrespite"
+    assert_equal(["prejudge", "sub", "traction", "respite"], segment_string(sample_string))
+  end
   
   def test_string_segmentation_catch_all
-    sample_string = "judginglyendingsaliasesbasements"
-    assert_equal(["judgingly", "endings", "aliases", "basements"], segment_string(sample_string))
+   sample_string = "judginglyendingsaliasesbasements"
+   assert_equal(["judgingly", "endings", "aliases", "basements"], segment_string(sample_string))
   end 
 end
 
