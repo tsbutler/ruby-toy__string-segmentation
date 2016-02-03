@@ -1,5 +1,3 @@
-require 'dictionary'
-
 require_relative "dictionary"
 
 def segment_string(str)
